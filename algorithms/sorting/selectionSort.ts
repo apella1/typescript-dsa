@@ -16,13 +16,16 @@ function selectionSort(array: number[]) {
   return array;
 }
 
-function swap(array: number[], a: number, b: number) {
+export function swap(array: number[], a: number, b: number) {
   let temp = array[a];
   array[a] = array[b];
   array[b] = temp;
 }
 
 const unsortedNumbers = [3, 53, -2, 1, 343, 89, 10];
+
+const unsortedArrayCopy = Array.from(unsortedNumbers);
+
 const sortedNumbers = selectionSort([...unsortedNumbers]);
 
 console.log(unsortedNumbers);
